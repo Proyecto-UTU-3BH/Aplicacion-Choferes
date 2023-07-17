@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.BarraNavegacion{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  left: -230px;
+  transition: all ease-in-out 300ms;
+}
+
+.sidebar{
+width: 230px;
+height: 100%;
+background: black;
+float: left;
+}
+
+.sidebar img{
+  width: 130;
+  display: block;
+  margin: 10px auto;
+  opacity: 0.7;
+}
+
+.side-hide{
+  float: right;
+  margin: 12px;
+  color: white;
+  opacity: 0.7;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar ul li {
+  list-style: none;
+  padding: 12px 10px;
+}
+.sidebar ul li:hover {
+background-color: #4e4e4e;
+cursor: pointer;
+}
+.sidebar ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+
+#Hamburgesa{
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+.content h2{
+  text-transform: capitalize;
+  font-size: 30px;
+  margin-bottom: 19px;
+  margin-top: 19px;
+  margin-left: 230px;
+  text-align: center;
+}
+.content p{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 230px;
+}
+
+.cerrarseison{
+  margin-top: 350px;
+}
+
+.show{
+  left: 0;
+}
