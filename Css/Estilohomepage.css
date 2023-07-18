@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #1eb7d9;
+}
+
+hr{
+    border: solid #111;
+    height: 4px;
+    background-color: #fff;
+}
+
+.encimatabla{
+    background-color: #1891ac;
+}
+
+.BarraNavegacion {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: -230px;
+    transition: all ease-in-out 300ms;
+}
+
+.sidebar {
+    width: 230px;
+    height: 100%;
+    background: #111;
+    float: left;
+}
+
+.sidebar img {
+    width: 130;
+    display: block;
+    margin: 10px auto;
+    opacity: 0.7;
+}
+
+.side-hide {
+    float: right;
+    margin: 12px;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 12px 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #1891ac;
+    cursor: pointer;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+#Hamburgesa {
+    font-size: 30px;
+    cursor: pointer;
+    color: #111;
+}
+
+.content h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 19px;
+    margin-top: 19px;
+    margin-left: 230px;
+    text-align: center;
+}
+
+.cerrarseison {
+    margin-top: 350px;
+}
+
+.show {
+    left: 0;
+}
+
+th,
+td,
+tr {
+    margin-top: 30%;
+    font-size: 30px;
+    text-align: center;
+}
+
+table {
+    background-color: #d2ecf9;
+    display: flex;
+    width: 60%;
+    margin: auto;
+
+}
+
+th,
+td {
+    padding: 20px;
+}
