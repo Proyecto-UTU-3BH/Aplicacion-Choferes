@@ -15,10 +15,6 @@ hr{
     background-color: #fff;
 }
 
-.encimatabla{
-    background-color: #111;
-}
-
 .BarraNavegacion {
     position: fixed;
     width: 100%;
@@ -75,14 +71,18 @@ hr{
     color: #fff;
 }
 
+
 .content h2 {
+    color: #fff;
     text-transform: capitalize;
     font-size: 30px;
     margin-bottom: 19px;
     margin-top: 19px;
     margin-left: 230px;
     text-align: center;
-    color: #fff;
+}
+.encimatabla{
+    background-color: #111;
 }
 
 .cerrarseison {
@@ -92,24 +92,43 @@ hr{
 .show {
     left: 0;
 }
-
-th,
-td,
-tr {
-    margin-top: 30%;
-    font-size: 30px;
+.form {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .form input{
+    width: 50% ;
+  }
+  
+  .form label, select, input
+  {
     text-align: center;
-}
+    align-items: center;
+    size: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-table {
-    background-color: #d2ecf9;
-    display: flex;
-    width: 60%;
-    margin: auto;
-
+  .profile-picture {
+    margin-top: 20px;
+    text-align: center;
+  }
+  button{
+    grid-column: span 2;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    margin: 0 auto;
 }
-
-th,
-td {
-    padding: 20px;
-}
+  
+  .profile-picture img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
