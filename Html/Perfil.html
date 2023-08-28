@@ -16,62 +16,61 @@
         <a href="/Html/homepageCamionero.html">Ver Lotes</a>
         <a href="/Html/rutas.html">Ver Rutas</a>
         <a class="cerrarseison" href="Html/">Cerrar Sesion</a>
-      </div>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      
-      <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-      </script>
-        <div class="content">
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-        
-                <h2>Perfil</h2>
-                <hr>
-                </div>
-                <div class="profile-picture">
-                    <img src="/Imagenes/avatar.webp" alt="Foto de perfil">
-                  </div>
-                  <br>
-                <div class="form">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-              
-                    <label for="apellido1">Primer apellido:</label>
-                    <input type="text" id="apellido1" name="apellido1" required>
-              
-                    <label for="apellido2">Segundo apellido:</label>
-                    <input type="text" id="apellido2" name="apellido2" required>
-              
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-              
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-              
-                    <label for="foto">Seleccionar foto de perfil:</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
-              
-                    <button type="submit">Guardar</button>
-                  </div>
-                  
-               
-                <script src="https://kit.fontawesome.com/e30b2b0b69.js" crossorigin="anonymous"></script>
-                <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-                <script>
-                    $('.AbrirMenu').on('click', function () {
-                        $(".BarraNavegacion").toggleClass('show');
-                    })
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
 
-                    $('.side-hide').on('click', function () {
-                        $(".BarraNavegacion").toggleClass('show');
-                    });
-                </script>
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <div class="content">
+
+
+        <h2>Perfil</h2>
+    </div>
+    <div class="profile-picture">
+        <img src="/Imagenes/avatar.webp" alt="Foto de perfil">
+    </div>
+    <br>
+    <div class="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido1">Primer apellido:</label>
+        <input type="text" id="apellido1" name="apellido1" required>
+
+        <label for="apellido2">Segundo apellido:</label>
+        <input type="text" id="apellido2" name="apellido2" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="foto">Seleccionar foto de perfil:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <button type="submit">Guardar</button>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e30b2b0b69.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $('.AbrirMenu').on('click', function () {
+            $(".BarraNavegacion").toggleClass('show');
+        })
+
+        $('.side-hide').on('click', function () {
+            $(".BarraNavegacion").toggleClass('show');
+        });
+    </script>
 </body>
 
 </html>

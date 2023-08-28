@@ -10,34 +10,34 @@
 
 <body>
     <div id="mySidenav" class="sidenav">
-    <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/Html/Perfil.html">Perfil</a>
-    <a href="/Html/homepageCamionero.html">Ver Lotes</a>
-    <a href="/Html/rutas.html">Ver Rutas</a>
-    <a class="cerrarseison" href="Html/">Cerrar Sesion</a>
-  </div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>
-        <div class="content">
-           
-            <h2>Ruta a seguir</h2>
-            <div id="map"></div>
-            <script src="/JavaScript/Mapa.js"></script>
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
-                </script>
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html/Perfil.html">Perfil</a>
+        <a href="/Html/homepageCamionero.html">Ver Lotes</a>
+        <a href="/Html/rutas.html">Ver Rutas</a>
+        <a class="cerrarseison" href="Html/">Cerrar Sesion</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-        </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <div class="content">
+
+        <h2>Ruta a seguir</h2>
+        <div id="map"></div>
+        <script src="/JavaScript/Mapa.js"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
+            </script>
+
+    </div>
 </body>
 
 </html>
