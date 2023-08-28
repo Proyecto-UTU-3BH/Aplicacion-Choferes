@@ -9,25 +9,28 @@
 </head>
 
 <body>
-    <section class="BarraNavegacion">
-        <div class="sidebar">
-            <div class="side-hide">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </div>
-            <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
-            <ul>
-                <li><a href="/Html/Perfil.html">Perfil</a></li>
-                <li><a href="/Html/homepageCamionero.html">Ver Lotes</a></li>
-                <li><a href="/Html/rutas.html">Ver Rutas</a></li>
-                <li class="cerrarseison"><a href="Html/">Cerrar Sesion</a></li>
-            </ul>
-        </div>
+    <div id="mySidenav" class="sidenav">
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html/Perfil.html">Perfil</a>
+        <a href="/Html/homepageCamionero.html">Ver Lotes</a>
+        <a href="/Html/rutas.html">Ver Rutas</a>
+        <a class="cerrarseison" href="Html/">Cerrar Sesion</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
         <div class="content">
 
-            <div class="encimatabla">
-                <div class="AbrirMenu">
-                    <i class="fa-solid fa-bars" id="Hamburgesa"></i>
-                </div>
+        
                 <h2>Perfil</h2>
                 <hr>
                 </div>
