@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pefil camionero</title>
     <link rel="stylesheet" href="/Css/perfil.css">
+    <link rel="stylesheet" href="/Css/bootstrap.min.css">
 </head>
 
 <body>
@@ -28,7 +29,42 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-    <div class="content">
+
+    <div class="container rounded bg-white mt-5">
+        <div class="row">
+            <div class="col-md-4 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" id="profilePhoto"></div>
+            </div>
+            <div class="col-md-6 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="text-right">Perfil</h3>
+                    </div>
+                    <form action="#" method="post">
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                        <label class="labels">Nombre</label><input type="text" class="form-control mb-3" id="nombre" required disabled>
+                        <label class="labels">Segundo Apellido</label><input type="text" class="form-control mb-3" id="apellido2" disabled>
+                        <label class="labels">Teléfono de Contacto</label><input type="tel" class="form-control mb-3" id="tel" required>
+                        <label class="labels">Contraseña</label><input type="password" class="form-control mb-3" id="password" required >
+                        </div>  
+                        <div class="col-md-6">
+                        <label class="labels">Primer Apellido</label><input type="text" class="form-control mb-3" id="apellido1" required disabled>
+                        <label class="labels">Email</label><input type="text" class="form-control mb-3" id="email" required disabled>
+                        <label class="labels">Imagén de Perfil</label><input type="file" class="form-control mb-3" id="fotoPerfil" accept="image/png, image/jpeg, image/jpg" >
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 text-center"><button class="btn btn-info profile-button" type="submit" id="guardarPerfil">Guardar cambios</button></div>
+                    </form>
+                </div>
+                    
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--<div class="content">
 
 
         <h2>Perfil</h2>
@@ -57,7 +93,7 @@
         <input type="file" id="foto" name="foto" accept="image/*" required>
 
         <button type="submit">Guardar</button>
-    </div>
+    </div>-->
 
 
     <script src="https://kit.fontawesome.com/e30b2b0b69.js" crossorigin="anonymous"></script>

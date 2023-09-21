@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #1eb7d9;
+    background-color: #1eb7d9 !important;
 }
 
 .sidenav {
@@ -58,70 +58,13 @@ body {
 }
 
 .sidenav img {
-    width: 120;
+    width: 120px;
     display: block;
-    margin: 0px auto;
+    margin:0 50px 20px 45px;
     opacity: 0.7;
 }
 
-.content h2 {
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 30px;
-    margin-bottom: 19px;
-    margin-top: 2px;
-    text-align: center;
+#guardarPerfil {
+    color: #fffdfd;
 }
 
-.encimatabla {
-    background-color: #111;
-}
-
-
-.show {
-    left: 0;
-}
-
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
-.form input {
-    width: 50%;
-}
-
-.form label,
-select,
-input {
-    text-align: center;
-    align-items: center;
-    size: 100px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.profile-picture {
-    margin-top: 20px;
-    text-align: center;
-}
-
-button {
-    grid-column: span 2;
-    height: 30px;
-    cursor: pointer;
-    display: block;
-    padding: 0.5rem 1rem;
-    width: 200px;
-    margin: 0 auto;
-}
-
-.profile-picture img {
-    max-width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-}
