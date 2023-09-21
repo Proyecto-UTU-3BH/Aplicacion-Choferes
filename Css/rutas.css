@@ -9,7 +9,6 @@ body {
     background-color: #1eb7d9;
 }
 
-
 .content h2 {
     border: solid #111;
     border-width: 1px;
@@ -19,7 +18,8 @@ body {
     margin-bottom: 19px;
     margin-top: 19px;
     text-align: center;
-}
+} 
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -31,41 +31,42 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 15px;
-  }
+}
   
-  .sidenav a {
+.sidenav a {
     padding: 8px 8px 8px 10px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
-  .cerrarseison {
+}
+
+.cerrarseison {
     margin-top: 300px;
 }
   
-  .sidenav a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+}
   
-  .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 30px;
     margin-left: 50px;
-  }
+}
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
 
-  .sidenav img {
-    width: 120;
+.sidenav img {
+    width: 120px;
     display: block;
-    margin: 0px auto;
+    margin:0 50px 20px 45px;
     opacity: 0.7;
 }
 
