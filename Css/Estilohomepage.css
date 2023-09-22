@@ -94,13 +94,33 @@ tr {
 
 table {
     background-color: #d2ecf9;
-    display: flex;
-    width: 60%;
+    width: 80%;
     margin: auto;
-
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
 
 td {
-    padding: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
 }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }

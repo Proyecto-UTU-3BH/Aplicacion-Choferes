@@ -9,16 +9,24 @@ body {
     background-color: #1eb7d9;
 }
 
-.content h2 {
-    border: solid #111;
-    border-width: 1px;
+.content {
     background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #111; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    max-width: 800px;
+}
+
+.content h2 {
     text-transform: capitalize;
     font-size: 30px;
-    margin-bottom: 19px;
-    margin-top: 19px;
+    margin-bottom: 10px;
     text-align: center;
-} 
+    color:#111; 
+}
+
 
 .sidenav {
     height: 100%;
@@ -75,6 +83,6 @@ body {
 }
 
 #map {
-    margin: auto;
+    margin: 20px auto;
     height: 450px;
 }
