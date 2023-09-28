@@ -44,7 +44,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-input[type="submit"] {
+button {
   width: 100%;
   padding: 10px;
   background-color: #ffffff;
@@ -54,7 +54,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button:hover {
   background-color: #a5d9f3;
   color: #00323d;
 }
