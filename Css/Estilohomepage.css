@@ -124,3 +124,29 @@ tr:nth-child(even) {
   tr:hover {
     background-color: #ddd;
   }
+
+  @media screen and (max-width: 768px) {
+
+
+    .sidenav a {
+        padding: 10px;
+    }
+
+    .sidenav .closebtn {
+        top: 15px;
+        right: 15px;
+    }
+
+    .sidenav img {
+        width: 60%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
