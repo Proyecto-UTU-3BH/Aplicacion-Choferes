@@ -66,7 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } 
     })
     .then(data => {
-        mostrarLotes(data);
+        if (data.length === 0) {
+            Swal.fire({
+                icon: 'info',
+                title: 'No hay lotes asignados',
+                text: 'No tienes lotes asignados en este momento.'
+            });
+        } else {
+            mostrarLotes(data);
+        }
     })
     .catch(error => {
         console.error("Error:", error);
