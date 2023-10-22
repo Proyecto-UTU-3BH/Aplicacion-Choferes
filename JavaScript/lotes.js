@@ -1,3 +1,23 @@
+function mostrarLotes(data) {
+    
+    const tbody = document.getElementById("lotes");
+
+    let htmlToAppend = '';
+
+    data.forEach(lote => {
+        htmlToAppend += `
+            <tr>
+                <td>${lote.IDLote}</td>
+                <td>${lote.destino}</td>
+            </tr>
+        `;
+    });
+
+    tbody.innerHTML = htmlToAppend;
+
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let idUsuario;
     const token = localStorage.getItem("access_token");
@@ -34,7 +54,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         idUsuario = data.id;
 
-        
+        const urlLotes = "http://localhost:8001/api/usuarios/verLotes/"+idUsuario;
+        return fetch(urlLotes, {
+            method: "GET",
+            headers: headers,
+        });
+    })
+    .then(async response => {
+        if (response.ok) {
+            return response.json();
+        } 
+    })
+    .then(data => {
+        mostrarLotes(data);
     })
     .catch(error => {
         console.error("Error:", error);
