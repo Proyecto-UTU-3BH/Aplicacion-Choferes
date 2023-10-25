@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Driver</title>
+    <link rel="stylesheet" href="/Css/perfil.css">
+    <link rel="stylesheet" href="/Css/bootstrap.min.css">
+    <script src="/JavaScript/cerrarSesion.js"></script>
+    <script src="/JavaScript/perfil.js"></script>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html/Perfil.html">Profile</a>
+        <a href="/Html/homepageCamionero.html">See batchs</a>
+        <a href="/Html/rutas.html">See routes</a>
+        <a class="cerrarseison" href="#" id="logOut">Sign off</a>
+
+        <div class="idioma-container">
+            <span class="idioma-label">Spanish</span>
+            <label class="switch">
+                <input type="checkbox" id="idiomaCheckbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="idioma-label">English</span>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        const checkbox = document.getElementById('idiomaCheckbox');
+
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                localStorage.setItem('idioma', 'ingles');
+                window.location.href = '/HTML EN/perfil.html';
+            } else {
+                localStorage.setItem('idioma', 'espanol');
+                window.location.href = '/HTML/perfil.html';
+            }
+        });
+
+        const idiomaSeleccionado = localStorage.getItem('idioma');
+
+        if (idiomaSeleccionado === 'ingles') {
+            checkbox.checked = true;
+        } else {
+            checkbox.checked = false;
+        }
+    </script>
+
+    <div class="container rounded bg-white mt-5">
+        <div class="row">
+            <div class="col-md-4 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                        width="150px"
+                        src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+                        id="profilePhoto"></div>
+            </div>
+            <div class="col-md-6 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="text-right">Profile</h3>
+                    </div>
+                    <form id="formularioModificacion">
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label class="labels">Name</label><input type="text" class="form-control mb-3"
+                                    id="nombre" required disabled>
+                                <label class="labels"></label>Second Surname<input type="text" class="form-control mb-3"
+                                    id="apellido2" disabled>
+                                <label class="labels"></label>Telephone Contact<input type="tel"
+                                    class="form-control mb-3" id="tel" required>
+                                <label class="labels">Password</label><input type="password" class="form-control mb-3"
+                                    id="password" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="labels"></label>Surname<input type="text" class="form-control mb-3"
+                                    id="apellido1" required disabled>
+                                <label class="labels">Email</label><input type="text" class="form-control mb-3"
+                                    id="email" required disabled>
+                                <label class="labels">Profile Picture</label><input type="file"
+                                    class="form-control mb-3" id="imagen_perfil" name="imagen_perfil"
+                                    accept="image/png, image/jpeg, image/jpg">
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center"><button class="btn btn-info profile-button" type="submit"
+                                id="guardarPerfil">Save Changes</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/e30b2b0b69.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $('.AbrirMenu').on('click', function () {
+            $(".BarraNavegacion").toggleClass('show');
+        })
+
+        $('.side-hide').on('click', function () {
+            $(".BarraNavegacion").toggleClass('show');
+        });
+    </script>
+</body>
+
+</html>

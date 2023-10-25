@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/Css/Estilohomepage.css">
+  <script src="/JavaScript/cerrarSesion.js"></script>
+  <script src="/JavaScript/lotes.js"></script>
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/Html/Perfil.html">Profile</a>
+    <a href="/Html/homepageCamionero.html">See batchs</a>
+    <a href="/Html/rutas.html">See routes</a>
+    <a class="cerrarseison" href="#" id="logOut">Sign off</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <div class="content">
+    <h2>Batchs to transport</h2>
+    <a href="/Html/rutas.html"><button id="verRutaBtn" class="ver-ruta-btn">See routes</button></a>
+  </div>
+
+  <table class="default">
+    <div class="Titulos">
+      <tr>
+        <th>ID Batch</th>
+        <th>Destination</th>
+      </tr>
+    </div>
+    <tbody id="lotes">
+
+    </tbody>
+
+  </table>
+  </div>
+
+  <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+</body>
+
+</html>
