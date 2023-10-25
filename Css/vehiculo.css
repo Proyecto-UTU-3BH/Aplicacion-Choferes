@@ -148,9 +148,10 @@ strong {
     cursor: pointer;
     border-radius: 5px; 
     font-size: 16px; 
+    transition: background-color 0.3s
 }
 
 
 #boton-container button:hover {
-    background-color: #1eb7d9; 
+    background-color: #069dbf; 
 }
