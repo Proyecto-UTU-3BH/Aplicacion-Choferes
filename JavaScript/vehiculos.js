@@ -2,17 +2,38 @@ function mostrarVehiculo(data) {
     
     const ul = document.getElementById("datos");
 
+    const matricula = data.matricula.toUpperCase();
+
+    const tipo = data.tipo.charAt(0).toUpperCase() + data.tipo.slice(1);
+
     let htmlToAppend = '';
 
     htmlToAppend = `
-        <li><strong>Matrícula:</strong> ${data.matricula}</li> 
-        <li><strong>Tipo:</strong> ${data.tipo}</li> 
+        <li><strong>Matrícula:</strong> ${matricula}</li> 
+        <li><strong>Tipo:</strong> ${tipo}</li> 
         <li><strong>Capacidad:</strong> ${data.capacidad}</li> 
         `;
 
 
     ul.innerHTML = htmlToAppend;
 
+    mostrarBtnRedirigir(data.tipo);
+
+}
+
+function mostrarBtnRedirigir(tipoVehiculo) {
+
+    const botonContainer = document.getElementById("boton-container");
+            
+        if (tipoVehiculo === 'reparto') {
+            botonContainer.innerHTML = `
+                <button onclick="window.location.href = '/Html/productos.html'">Ver Productos</button>
+            `;
+        } else if (tipoVehiculo === 'flete') {
+            botonContainer.innerHTML = `
+                <button onclick="window.location.href = '/Html/lotes.html'">Ver Lotes</button>
+            `;
+        }
 }
 
 
