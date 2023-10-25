@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Vehículo</title>
+    <link rel="stylesheet" href="/Css/vehiculo.css">
+    <script src="/JavaScript/vehiculos.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html/Perfil.html">Perfil</a>
+        <a href="/Html/vehiculo.html">Ver Vehiculo</a>
+        <a href="/Html/lotes.html">Ver Lotes</a>
+        <a href="/Html/rutas.html">Ver Rutas</a>
+        <a class="cerrarseison" href="#" id="logOut">Cerrar Sesion</a>
+    </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+      <div class="centrar">
+        <div class="container">
+            <h1>Información del Vehículo a Conducir</h1>
+            <ul id="datos">
+            </ul>
+        </div>
+    </div>
+
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
