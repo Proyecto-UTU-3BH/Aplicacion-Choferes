@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let token = localStorage.getItem('access_token');
     if (token!=null) {
-        location.href="homepageCamionero.html"
+        location.href="lotes.html"
     }
 
     loginForm.addEventListener("submit", function (event) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then((data) => {
             localStorage.setItem("access_token", data.access_token);
-            location.href = "homepageCamionero.html";
+            location.href = "lotes.html";
         })
         .catch((error) => {
             console.error("Error de red: ", error);
