@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("apellido1").value = userData.primer_apellido;
   document.getElementById("apellido2").value = userData.segundo_apellido;
   document.getElementById("email").value = userData.usuario;
+  document.getElementById("tel").value = userData.telefono;
 
   document.getElementById('imagen_perfil').addEventListener('change', function () {
    
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let primer_apellido= document.getElementById("apellido1").value;
       let segundo_apellido= document.getElementById("apellido2").value;
       let password= document.getElementById("password").value;
+      let telefono= document.getElementById("tel").value;
       
       let info= {
           "usuario": usuario,
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "ci": userData.ci,
           "primer_nombre": primer_nombre,
           "primer_apellido": primer_apellido,
+          "telefono": telefono,
           "segundo_apellido": segundo_apellido,
           "calle": userData.calle,
           "numero_de_puerta": userData.numero_de_puerta,
