@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(async response => {
         if (response.ok) {
           console.log("Usuario modificado con éxito.");
+          userData.telefono = telefono;
+          sessionStorage.setItem("userData", JSON.stringify(userData));
           location.reload();
         } else {
           const errorMessage = await response.text(); 
