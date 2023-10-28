@@ -9,12 +9,20 @@ function mostrarLotes(data) {
             <tr>
                 <td>${lote.IDLote}</td>
                 <td>${lote.destino}</td>
+                <td>
+                    <button class="ver-productos-btn" onclick="setCatID(${lote.IDLote})">Ver Productos</button>
+                </td>
             </tr>
         `;
     });
 
     tbody.innerHTML = htmlToAppend;
 
+}
+
+function setCatID(id) {
+    sessionStorage.setItem("IDLote", id);
+    location.href = "productosDeLote.html";
 }
 
 

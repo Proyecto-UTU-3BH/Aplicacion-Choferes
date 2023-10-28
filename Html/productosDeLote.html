@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Paquetes de Lote</title>
+    <link rel="stylesheet" href="/Css/productosLote.css">
+    <script src="/JavaScript/productosLote.js"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html/Perfil.html">Perfil</a>
+        <a href="/Html/vehiculo.html">Ver Vehiculo</a>
+        <a href="/Html/lotes.html">Ver Lotes</a>
+        <a href="/Html/rutas.html">Ver Rutas</a>
+        <a class="cerrarseison" href="#" id="logOut">Cerrar Sesion</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+
+    <div class="content">
+        <h2>Paquetes de Lote ID <span id="IDLote"></span></h1>
+        <a href="/Html/lotes.html"><button id="verLotesBtn" class="ver-lote-btn">Ver Lotes</button></a>
+    </div>
+    
+    <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Producto</th>
+              <th>Destino</th>
+              <th>Estado</th>
+              <th>Tipo</th>
+              <th>Remitente</th>
+              <th>Destinatario</th>
+              <th>Calle</th>
+              <th>Nº Puerta</th>
+              <th>Forma de Entrega</th>
+              <th>Peso</th>
+            </tr>
+          </thead>
+          <tbody id="productos"></tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
