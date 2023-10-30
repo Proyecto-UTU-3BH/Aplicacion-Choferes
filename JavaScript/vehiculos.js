@@ -38,6 +38,13 @@ function mostrarBtnRedirigir(tipoVehiculo) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    const loader = document.querySelector(".loader");
+    const datosContainer = document.getElementById("datos");
+
+    datosContainer.style.display = "none";
+    loader.style.display = "block";
+
     let idUsuario;
     const token = localStorage.getItem("access_token");
     const urlValidar = "http://localhost:8000/api/validate";
@@ -86,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } 
     })
     .then(data => {
+
+        loader.style.display = "none";
+        datosContainer.style.display = "block";
+
         if (data.message === 'El usuario no tiene ningún vehículo asignado.') {
             Swal.fire({
                 icon: 'info',
