@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información del Vehículo</title>
-    <link rel="stylesheet" href="/Css/vehiculo.css">
+    <title>Productos A Repartir</title>
+    <link rel="stylesheet" href="/Css/repartoProductos.css">
     <script src="/JavaScript/cerrarSesion.js"></script>
-    <script src="/JavaScript/vehiculos.js"></script>
+    <script src="/JavaScript/repartoProductos.js"></script>
 </head>
 <body>
     <div id="mySidenav" class="sidenav">
@@ -18,7 +18,7 @@
         <a href="/Html/repartoProductos.html">Productos A Repartir</a>
         <a href="/Html/rutas.html">Ver Rutas</a>
         <a class="cerrarseison" href="#" id="logOut">Cerrar Sesion</a>
-    </div>
+      </div>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       
       <script>
@@ -31,25 +31,29 @@
       }
       </script>
 
-    
-
-    <div class="centrar">
-        <div class="container">
-            <h1>Información del Vehículo a Conducir</h1>
-            <div class="centrar-loader">
-              <div class="loader"></div>
-            </div>
-            <ul id="datos">
-            </ul>
-            <div id="boton-container">
-
-            </div>
-        </div>
+    <div class="content">
+        <h2>Productos a Repartir</h2>
     </div>
-
     
-
-    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
-
+    <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Producto</th>
+              <th>Destino</th>
+              <th>Calle</th>
+              <th>Nº Puerta</th>
+              <th>Remitente</th>
+              <th>Destinatario</th>
+              <th>Tipo</th>
+              <th>Peso</th>
+              <th>Forma de Entrega</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="productos"></tbody>
+        </table>
+    </div>
+    
 </body>
 </html>

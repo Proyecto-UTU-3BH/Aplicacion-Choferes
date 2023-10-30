@@ -27,7 +27,7 @@ function mostrarBtnRedirigir(tipoVehiculo) {
             
         if (tipoVehiculo === 'reparto') {
             botonContainer.innerHTML = `
-                <button onclick="window.location.href = '/Html/productos.html'">Ver Productos</button>
+                <button onclick="window.location.href = '/Html/repartoProductos.html'">Ver Productos</button>
             `;
         } else if (tipoVehiculo === 'flete') {
             botonContainer.innerHTML = `
