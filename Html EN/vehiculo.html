@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Routes</title>
-  <link rel="stylesheet" href="/Css/rutas.css">
-  <script src="/JavaScript/cerrarSesion.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Information</title>
+    <link rel="stylesheet" href="/Css/vehiculo.css">
+    <script src="/JavaScript/cerrarSesion.js"></script>
+    <script src="/JavaScript/vehiculos.js"></script>
 </head>
-
 <body>
   <div id="mySidenav" class="sidenav">
     <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
@@ -57,17 +56,27 @@
     } else {
         checkbox.checked = false;
     }
-</script>
-  <div class="content">
-
-    <h2>Route to follow</h2>
-    <div id="map"></div>
-    <script src="/JavaScript/Mapa.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
       </script>
 
-  </div>
-</body>
+    
 
+    <div class="centrar">
+        <div class="container">
+            <h1>Vehicle information to drive</h1>
+            <div class="centrar-loader">
+              <div class="loader"></div>
+            </div>
+            <ul id="datos">
+            </ul>
+            <div id="boton-container">
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+</body>
 </html>
