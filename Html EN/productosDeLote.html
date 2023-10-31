@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rutas</title>
-  <link rel="stylesheet" href="/Css/rutas.css">
+  <title>Ver Paquetes de Lote</title>
+  <link rel="stylesheet" href="/Css/productosLote.css">
   <script src="/JavaScript/cerrarSesion.js"></script>
+  <script src="/JavaScript/productosLote.js"></script>
 </head>
 
 <body>
@@ -57,17 +58,33 @@
     } else {
         checkbox.checked = false;
     }
-</script>
+  </script>
+
   <div class="content">
-
-    <h2>Route to follow</h2>
-    <div id="map"></div>
-    <script src="/JavaScript/Mapa.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
-      </script>
-
+    <h2>Paquetes de Lote ID <span id="IDLote"></span></h1>
+      <a href="/Html EN/lotes.html"><button id="verLotesBtn" class="ver-lote-btn">Ver Lotes</button></a>
   </div>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID Producto</th>
+          <th>Destino</th>
+          <th>Estado</th>
+          <th>Tipo</th>
+          <th>Remitente</th>
+          <th>Destinatario</th>
+          <th>Calle</th>
+          <th>Nº Puerta</th>
+          <th>Forma de Entrega</th>
+          <th>Peso</th>
+        </tr>
+      </thead>
+      <tbody id="productos"></tbody>
+    </table>
+  </div>
+
 </body>
 
 </html>
