@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ver Paquetes de Lote</title>
+  <title>See Lot Packages</title>
   <link rel="stylesheet" href="/Css/productosLote.css">
   <script src="/JavaScript/cerrarSesion.js"></script>
   <script src="/JavaScript/productosLote.js"></script>
@@ -22,41 +22,41 @@
     <div class="idioma-container">
       <span class="idioma-label">Spanish</span>
       <label class="switch">
-          <input type="checkbox" id="idiomaCheckbox">
-          <span class="slider round"></span>
+        <input type="checkbox" id="idiomaCheckbox">
+        <span class="slider round"></span>
       </label>
       <span class="idioma-label">English</span>
-  </div>
+    </div>
   </div>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
   <script>
     function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mySidenav").style.width = "250px";
     }
 
     function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mySidenav").style.width = "0";
     }
 
     const checkbox = document.getElementById('idiomaCheckbox');
 
     checkbox.addEventListener('change', function () {
-        if (checkbox.checked) {
-            localStorage.setItem('idioma', 'ingles');
-            window.location.href = '/Html EN/rutas.html';
-        } else {
-            localStorage.setItem('idioma', 'espanol');
-            window.location.href = '/Html/rutas.html';
-        }
+      if (checkbox.checked) {
+        localStorage.setItem('idioma', 'ingles');
+        window.location.href = '/Html EN/rutas.html';
+      } else {
+        localStorage.setItem('idioma', 'espanol');
+        window.location.href = '/Html/rutas.html';
+      }
     });
 
     const idiomaSeleccionado = localStorage.getItem('idioma');
 
     if (idiomaSeleccionado === 'ingles') {
-        checkbox.checked = true;
+      checkbox.checked = true;
     } else {
-        checkbox.checked = false;
+      checkbox.checked = false;
     }
   </script>
 
@@ -69,16 +69,16 @@
     <table>
       <thead>
         <tr>
-          <th>ID Producto</th>
-          <th>Destino</th>
-          <th>Estado</th>
-          <th>Tipo</th>
-          <th>Remitente</th>
-          <th>Destinatario</th>
-          <th>Calle</th>
-          <th>Nº Puerta</th>
-          <th>Forma de Entrega</th>
-          <th>Peso</th>
+          <th>Product ID</th>
+          <th>Destination</th>
+          <th>Status</th>
+          <th>Type</th>
+          <th>Sender</th>
+          <th>Addressee</th>
+          <th>Street</th>
+          <th>Door Nº</th>
+          <th>Delivery Method</th>
+          <th>Update status</th>
         </tr>
       </thead>
       <tbody id="productos"></tbody>
