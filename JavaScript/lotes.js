@@ -9,6 +9,8 @@ function mostrarLotes(data) {
             <tr>
                 <td>${lote.IDLote}</td>
                 <td>${lote.destino}</td>
+                <td>${lote.calle_almacen}</td>
+                <td>${lote.numero_puerta_almacen}</td>
                 <td>
                     <button class="ver-productos-btn" onclick="setCatID(${lote.IDLote})">Ver Productos</button>
                 </td>
