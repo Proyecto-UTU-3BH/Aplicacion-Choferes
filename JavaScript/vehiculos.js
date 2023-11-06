@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             telefono: data.telefono
         };
 
-        sessionStorage.setItem("userData", JSON.stringify(userData));
+        localStorage.setItem("userData", JSON.stringify(userData));
 
         idUsuario = data.id;
 

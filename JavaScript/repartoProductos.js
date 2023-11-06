@@ -127,7 +127,7 @@ function obtenerFecha() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const userData = JSON.parse(sessionStorage.getItem("userData"));
+  const userData = JSON.parse(localStorage.getItem("userData"));
   let idUsuario = userData.idUsuario;
 
   const token = localStorage.getItem("access_token");

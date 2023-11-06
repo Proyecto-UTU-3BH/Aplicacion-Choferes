@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((response) => {
                 if (response.ok) {
                     localStorage.removeItem("access_token");
-                    sessionStorage.removeItem("userData");
+                    localStorage.removeItem("userData");
                     location.href = "index.html";
                 } else {
                     console.error("Error en la solicitud de cierre de sesión.");

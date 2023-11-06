@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-  let userData = JSON.parse(sessionStorage.getItem("userData"));
+  let userData = JSON.parse(localStorage.getItem("userData"));
   
   document.getElementById("nombre").value = userData.primer_nombre;
   document.getElementById("apellido1").value = userData.primer_apellido;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           console.log("Usuario modificado con éxito.");
           userData.telefono = telefono;
-          sessionStorage.setItem("userData", JSON.stringify(userData));
+          localStorage.setItem("userData", JSON.stringify(userData));
           location.reload();
         } else {
           const errorMessage = await response.text(); 

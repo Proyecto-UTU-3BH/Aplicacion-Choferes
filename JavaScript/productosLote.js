@@ -26,7 +26,7 @@ function mostrarPaquetes (data) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    let idLote = sessionStorage.getItem('IDLote');
+    let idLote = localStorage.getItem('IDLote');
     document.getElementById('IDLote').innerHTML=idLote;
     const token = localStorage.getItem("access_token");
     const urlPaquetesLote = "http://localhost:8001/api/lotes/"+idLote+"/productos";
