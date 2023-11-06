@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>See Lot Packages</title>
+  <title>See Batch Packages</title>
   <link rel="stylesheet" href="/Css/productosLote.css">
   <script src="/JavaScript/cerrarSesion.js"></script>
   <script src="/JavaScript/productosLote.js"></script>
@@ -15,8 +15,10 @@
     <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/Html EN/Perfil.html">Profile</a>
-    <a href="/Html EN/lotes.html">See batchs</a>
-    <a href="/Html EN/rutas.html">See routes</a>
+    <a href="/Html EN/vehiculo.html">See Vehicle</a>
+    <a href="/Html EN/lotes.html">See Batchs</a>
+    <a href="/Html EN/repartoProductos.html">Delivery Products</a>
+    <a href="/Html EN/rutas.html">See Routes</a>
     <a class="cerrarseison" href="#" id="logOut">Sign off</a>
 
     <div class="idioma-container">
@@ -61,7 +63,7 @@
   </script>
 
   <div class="content">
-    <h2>Paquetes de Lote ID <span id="IDLote"></span></h1>
+    <h2>Batch ID <span id="IDLote"></span> Packages</h1>
       <a href="/Html EN/lotes.html"><button id="verLotesBtn" class="ver-lote-btn">Ver Lotes</button></a>
   </div>
 
@@ -78,7 +80,7 @@
           <th>Street</th>
           <th>Door Nº</th>
           <th>Delivery Method</th>
-          <th>Update status</th>
+          <th>Weight</th>
         </tr>
       </thead>
       <tbody id="productos"></tbody>
