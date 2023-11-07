@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let idUsuario = userData.idUsuario;
 
   const token = localStorage.getItem("access_token");
-  const urlMostrarRuta = "http://localhost:8001/api/ruta/mostrarRuta/" + idUsuario;
+  const urlMostrarRuta = "http://localhost:8002/api/ruta/mostrarRuta/" + idUsuario;
   const headers = {
     "Authorization": "Bearer " + token,
     "Content-Type": "application/json"

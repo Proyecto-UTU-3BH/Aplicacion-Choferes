@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let idLote = sessionStorage.getItem('IDLote');
     document.getElementById('IDLote').innerHTML=idLote;
     const token = localStorage.getItem("access_token");
-    const urlPaquetesLote = "http://localhost:8001/api/lotes/"+idLote+"/productos";
+    const urlPaquetesLote = "http://localhost:8002/api/lotes/"+idLote+"/productos";
     const headers = {
         "Authorization": "Bearer " + token,
         "Content-Type": "application/json"

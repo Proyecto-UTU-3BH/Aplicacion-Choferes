@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Authorization": "Bearer " + token,
     };
 
-    const urlLotes = "http://localhost:8001/api/usuarios/verLotes/" + idUsuario;
+    const urlLotes = "http://localhost:8002/api/usuarios/verLotes/" + idUsuario;
 
     fetch(urlLotes, {
         method: "GET",

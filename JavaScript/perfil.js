@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const token = localStorage.getItem("access_token");
 
-      const urlModificar = "http://localhost:8001/api/usuarios/"+userData.idUsuario;
+      const urlModificar = "http://localhost:8002/api/usuarios/"+userData.idUsuario;
       fetch(urlModificar, {
           method: "POST",
           headers: {
