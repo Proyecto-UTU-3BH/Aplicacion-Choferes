@@ -12,9 +12,12 @@
   <div id="mySidenav" class="sidenav">
     <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/Html EN/Perfil.html">Profile</a>
-    <a href="/Html EN/lotes.html">See batchs</a>
-    <a href="/Html EN/rutas.html">See routes</a>
+    <a href="/Html EN/vehiculo.html">See Vehicle</a>
+    <a href="/Html EN/lotes.html">See Batchs</a>
+    <a href="/Html EN/repartoProductos.html">Delivery Products</a>
+    <a href="/Html EN/rutas.html">See Routes</a>
     <a class="cerrarseison" href="#" id="logOut">Sign off</a>
 
     <div class="idioma-container">
@@ -41,10 +44,10 @@
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             localStorage.setItem('idioma', 'ingles');
-            window.location.href = '/Html EN/rutas.html';
+            window.location.href = '/Html EN/repartoProductos.html';
         } else {
             localStorage.setItem('idioma', 'espanol');
-            window.location.href = '/Html/rutas.html';
+            window.location.href = '/Html/repartoProductos.html';
         }
     });
 

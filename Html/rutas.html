@@ -2,74 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutas</title>
-    <link rel="stylesheet" href="/Css/rutas.css">
-    <script src="/JavaScript/cerrarSesion.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Rutas</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="/Css/rutas.css">
+  <script src="/JavaScript/cerrarSesion.js"></script>
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">
-        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/Html/Perfil.html">Perfil</a>
-        <a href="/Html/vehiculo.html">Ver Vehiculo</a>
-        <a href="/Html/lotes.html">Ver Lotes</a>
-        <a href="/Html/repartoProductos.html">Productos A Repartir</a>
-        <a href="/Html/rutas.html">Ver Rutas</a>
-        <a class="cerrarseison" href="#" id="logOut">Cerrar Sesion</a>
-    
-        <div class="idioma-container">
-          <span class="idioma-label">Español</span>
-          <label class="switch">
-            <input type="checkbox" id="idiomaCheckbox" />
-            <span class="slider round"></span>
-          </label>
-          <span class="idioma-label">Inglés</span>
-        </div>
-      </div>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      
-      <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-    
-      const checkbox = document.getElementById("idiomaCheckbox");
-    
-        checkbox.addEventListener("change", function () {
-          if (checkbox.checked) {
-            localStorage.setItem("idioma", "ingles");
-            window.location.href = "/Html EN/rutas.html";
-          } else {
-            localStorage.setItem("idioma", "espanol");
-            window.location.href = "/Html/rutas.html";
-          }
-        });
-    
-        const idiomaSeleccionado = localStorage.getItem("idioma");
-    
-        if (idiomaSeleccionado === "ingles") {
-          checkbox.checked = true;
-        } else {
-          checkbox.checked = false;
-        }
-    </script>
-    <div class="content">
+  <div id="mySidenav" class="sidenav">
+    <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/Html/Perfil.html">Perfil</a>
+    <a href="/Html/vehiculo.html">Ver Vehiculo</a>
+    <a href="/Html/lotes.html">Ver Lotes</a>
+    <a href="/Html/repartoProductos.html">Productos A Repartir</a>
+    <a href="/Html/rutas.html">Ver Rutas</a>
+    <a class="cerrarseison" href="#" id="logOut">Cerrar Sesion</a>
 
-        <h2>Ruta a seguir</h2>
-        <div id="map"></div>
-        <script src="/JavaScript/Mapa.js"></script>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
-            </script>
-
+    <div class="idioma-container">
+      <span class="idioma-label">Español</span>
+      <label class="switch">
+        <input type="checkbox" id="idiomaCheckbox" />
+        <span class="slider round"></span>
+      </label>
+      <span class="idioma-label">Inglés</span>
     </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    const checkbox = document.getElementById("idiomaCheckbox");
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        localStorage.setItem("idioma", "ingles");
+        window.location.href = "/Html EN/rutas.html";
+      } else {
+        localStorage.setItem("idioma", "espanol");
+        window.location.href = "/Html/rutas.html";
+      }
+    });
+
+    const idiomaSeleccionado = localStorage.getItem("idioma");
+
+    if (idiomaSeleccionado === "ingles") {
+      checkbox.checked = true;
+    } else {
+      checkbox.checked = false;
+    }
+  </script>
+
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="/JavaScript/Mapa.js"></script>
+
+
 </body>
 
 </html>

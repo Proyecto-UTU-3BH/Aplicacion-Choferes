@@ -27,7 +27,6 @@
       </div>
       </div>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
   <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -42,10 +41,10 @@
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             localStorage.setItem('idioma', 'ingles');
-            window.location.href = '/Html EN/rutas.html';
+            window.location.href = '/Html EN/vehiculo.html';
         } else {
             localStorage.setItem('idioma', 'espanol');
-            window.location.href = '/Html/rutas.html';
+            window.location.href = '/Html/vehiculo.html';
         }
     });
 
@@ -62,7 +61,7 @@
 
     <div class="centrar">
         <div class="container">
-            <h1>Vehicle information to drive</h1>
+            <h1>Information about the vehicle to drive</h1>
             <div class="centrar-loader">
               <div class="loader"></div>
             </div>

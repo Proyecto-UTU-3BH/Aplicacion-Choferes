@@ -9,6 +9,8 @@ function mostrarLotes(data) {
             <tr>
                 <td>${lote.IDLote}</td>
                 <td>${lote.destino}</td>
+                <td>${lote.calle_almacen}</td>
+                <td>${lote.numero_puerta_almacen}</td>
                 <td>
                     <button class="ver-productos-btn" onclick="setCatID(${lote.IDLote})">Ver Productos</button>
                 </td>
@@ -28,7 +30,7 @@ function setCatID(id) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const userData = JSON.parse(sessionStorage.getItem("userData"));
+    const userData = JSON.parse(localStorage.getItem("userData"));
     let idUsuario = userData.idUsuario;
 
     const token = localStorage.getItem("access_token");
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Authorization": "Bearer " + token,
     };
 
-    const urlLotes = "http://localhost:8001/api/usuarios/verLotes/" + idUsuario;
+    const urlLotes = "http://localhost:8002/api/usuarios/verLotes/" + idUsuario;
 
     fetch(urlLotes, {
         method: "GET",

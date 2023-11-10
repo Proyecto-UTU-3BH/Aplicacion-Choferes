@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Routes</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
   <link rel="stylesheet" href="/Css/rutas.css">
   <script src="/JavaScript/cerrarSesion.js"></script>
 </head>
@@ -13,9 +18,12 @@
   <<div id="mySidenav" class="sidenav">
     <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/Html EN/Perfil.html">Profile</a>
-    <a href="/Html EN/lotes.html">See batchs</a>
-    <a href="/Html EN/rutas.html">See routes</a>
+    <a href="/Html EN/vehiculo.html">See Vehicle</a>
+    <a href="/Html EN/lotes.html">See Batchs</a>
+    <a href="/Html EN/repartoProductos.html">Delivery Products</a>
+    <a href="/Html EN/rutas.html">See Routes</a>
     <a class="cerrarseison" href="#" id="logOut">Sign off</a>
 
     <div class="idioma-container">
@@ -58,14 +66,14 @@
         checkbox.checked = false;
     }
 </script>
-  <div class="content">
 
-    <h2>Route to follow</h2>
     <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     <script src="/JavaScript/Mapa.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap">
-      </script>
 
   </div>
 </body>

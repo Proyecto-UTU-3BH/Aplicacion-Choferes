@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
             telefono: data.telefono
         };
 
-        sessionStorage.setItem("userData", JSON.stringify(userData));
+        localStorage.setItem("userData", JSON.stringify(userData));
 
         idUsuario = data.id;
 
-        const urlVehiculo = "http://localhost:8001/api/manejar/"+idUsuario+"/vehiculo";
+        const urlVehiculo = "http://localhost:8002/api/manejar/"+idUsuario+"/vehiculo";
         return fetch(urlVehiculo, {
             method: "GET",
             headers: headers,

@@ -63,7 +63,7 @@ function preguntarConfirmacion() {
 
 function marcarComoEntregado(idProducto, idReparte) {
   const token = localStorage.getItem("access_token");
-  const urlMarcarComoEntregado = "http://localhost:8001/api/productos/modificar/" + idProducto;
+  const urlMarcarComoEntregado = "http://localhost:8002/api/productos/modificar/" + idProducto;
 
   const headers = {
     "Authorization": "Bearer " + token,
@@ -89,7 +89,7 @@ function marcarComoEntregado(idProducto, idReparte) {
 
 function modificarFechaRealizacion(idReparte) {
   const token = localStorage.getItem("access_token");
-  const urlModificarFecha = `http://localhost:8001/api/reparte/${idReparte}`;
+  const urlModificarFecha = `http://localhost:8002/api/reparte/${idReparte}`;
   const fechaRealizacion = obtenerFecha();
 
   const headers = {
@@ -127,11 +127,11 @@ function obtenerFecha() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const userData = JSON.parse(sessionStorage.getItem("userData"));
+  const userData = JSON.parse(localStorage.getItem("userData"));
   let idUsuario = userData.idUsuario;
 
   const token = localStorage.getItem("access_token");
-  const urlRepartoPaquetes = "http://localhost:8001/api/usuarios/" + idUsuario + "/verProductos";
+  const urlRepartoPaquetes = "http://localhost:8002/api/usuarios/" + idUsuario + "/verProductos";
   const headers = {
     "Authorization": "Bearer " + token,
     "Content-Type": "application/json"

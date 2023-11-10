@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-  let userData = JSON.parse(sessionStorage.getItem("userData"));
+  let userData = JSON.parse(localStorage.getItem("userData"));
   
   document.getElementById("nombre").value = userData.primer_nombre;
   document.getElementById("apellido1").value = userData.primer_apellido;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const token = localStorage.getItem("access_token");
 
-      const urlModificar = "http://localhost:8001/api/usuarios/"+userData.idUsuario;
+      const urlModificar = "http://localhost:8002/api/usuarios/"+userData.idUsuario;
       fetch(urlModificar, {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           console.log("Usuario modificado con éxito.");
           userData.telefono = telefono;
-          sessionStorage.setItem("userData", JSON.stringify(userData));
+          localStorage.setItem("userData", JSON.stringify(userData));
           location.reload();
         } else {
           const errorMessage = await response.text(); 
