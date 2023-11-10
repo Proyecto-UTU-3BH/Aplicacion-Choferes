@@ -9,27 +9,24 @@
     <script src="/JavaScript/vehiculos.js"></script>
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/Html EN/Perfil.html">Profile</a>
-    <a href="/Html EN/vehiculo.html">See Vehicle</a>
-    <a href="/Html EN/lotes.html">See Batchs</a>
-    <a href="/Html EN/repartoProductos.html">Delivery Products</a>
-    <a href="/Html EN/rutas.html">See Routes</a>
-    <a class="cerrarseison" href="#" id="logOut">Sign off</a>
-
-    <div class="idioma-container">
-      <span class="idioma-label">Spanish</span>
-      <label class="switch">
-          <input type="checkbox" id="idiomaCheckbox">
-          <span class="slider round"></span>
-      </label>
-      <span class="idioma-label">English</span>
-  </div>
-  </div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
+    <div id="mySidenav" class="sidenav">
+        <img src="/Imagenes/LogoDelSistema.png" width="120" alt="LogoDelSistema">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Html EN/Perfil.html">Profile</a>
+        <a href="/Html EN/lotes.html">See batchs</a>
+        <a href="/Html EN/rutas.html">See routes</a>
+        <a class="cerrarseison" href="#" id="logOut">Sign off</a>
+    
+        <div class="idioma-container">
+          <span class="idioma-label">Spanish</span>
+          <label class="switch">
+              <input type="checkbox" id="idiomaCheckbox">
+              <span class="slider round"></span>
+          </label>
+          <span class="idioma-label">English</span>
+      </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
